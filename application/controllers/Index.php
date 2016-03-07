@@ -7,8 +7,8 @@ class IndexController extends Yaf\Controller_Abstract {
 
     public function indexAction () 
     {
-        echo "Hello Yaf!";
-        return ;
+        $content = "Hello Yaf!";
+        $this->getView()->assign('content', $content);
     }
 
 
