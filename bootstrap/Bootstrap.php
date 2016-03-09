@@ -33,7 +33,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     {
         $route = Yaf\Dispatcher::getInstance()->getRouter();
         // 添加配置中的路由
-        $route->addConfig(Yaf\Registry::get('config')->routes);
+        # $route->addConfig(Yaf\Registry::get('config')->routes);
     }
 
     public function _initPlugin (Yaf\Dispatcher $dispatcher)
