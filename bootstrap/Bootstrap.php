@@ -19,11 +19,27 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     }
 
     
-    public function _initPlugins ()
+    public function _initDefaultName (Yaf\Dispatcher $dispatcher)
+    {
+        $dispatcher->setDefaultModule("Index")->setDefaultController("Index")->setDefaultAction("index"); 
+    }
+
+    public function _initLayout(Yaf\Dispatcher $dispatcher)
     {
     
     }
 
+    public function _initRoute (Yaf\Dispatcher $dispatcher)
+    {
+        $route = Yaf\Dispatcher::getInstance()->getRouter();
+        // 添加配置中的路由
+        $route->addConfig(Yaf\Registry::get('config')->routes);
+    }
+
+    public function _initPlugin (Yaf\Dispatcher $dispatcher)
+    {
+    
+    }
 
 
 }
