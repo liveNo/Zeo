@@ -18,6 +18,11 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
         Yaf\Registry::set("config", $config);
     }
 
+    
+    public function _initPlugins ()
+    {
+    
+    }
 
 
 
