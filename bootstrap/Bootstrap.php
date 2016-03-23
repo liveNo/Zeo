@@ -41,10 +41,6 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     
     }
 
-    public function _initLayout ()
-    {
-
-    }
 
 }
 
