@@ -10,12 +10,11 @@
 
 .font48 { font-size: 48px;}
 .white { color: #ffffff;}
+#content { padding-top: 20px;}
 
 @media (max-width: 480px) {
     /*.top-bannar { position: fixed; z-index: 9999;}*/
-    #content { padding-top: 20px;}
     .content-right { display: none;}
-
-
+    .t-logo {display: none;}
 }
 
