@@ -1,113 +1,168 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Weekly 记录</title>
-    <!--<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">-->
-    <link rel="stylesheet" href="/resources/css/foundation.css">
-    <link rel="stylesheet" href="/resources/css/common.css">
-    <link rel="stylesheet" href="/resources/css/index.css">
+    <title>WEEKLY - 周末记录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/foundation.min.css">
+    <!--    <link rel="stylesheet" href="/resources/css/common.css">-->
+    <!--    <link rel="stylesheet" href="/resources/css/index.css">-->
+
+    <style type="text/css">
+        @media (max-width: 480px) {
+            .small-device {
+                display: none;
+            }
+        }
+        .color-blue {color: #09A1AD;}
+        .blog-post { border-bottom: 1px dashed rgba(134, 25, 55, 0.62); margin-bottom: 15px;}
+        .blog-post:last-child { border-bottom: none; margin-bottom: 15px;}
+        .blog-post h3 {border-left: 5px solid #cffecf; padding-left: 10px;}
+        .blog-post p {text-indent: 2em;}
+        /*.blog-post:hover { border: 1px solid rgba(134, 25, 55, 0.62);}*/
+
+    </style>
+
 </head>
 <body>
-    <!-- Top Bannar -->
-    <div class="top-bar top-bannar">
-        <div class="top-bar-left t-logo">
-            <ul class="menu">
-                <li class="menu-text" style="color:#fff;">WEEKLY</li>
-            </ul>
-        </div>
-        <div class="top-bar-left">
-            <ul class="menu">
-                <li><a href="#">首页</a></li>
+
+<div class="fixed">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="javascript:;">Weekly</a></h1>
+            </li>
+            <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+           如果需要只显示图片，可以删除 "Menu" 文本 -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <ul class="left">
+                <li><a href="active">首页</a></li>
                 <li><a href="#">编程语言</a></li>
                 <li><a href="#">技术杂谈</a></li>
                 <li><a href="#">生活百味</a></li>
             </ul>
-        </div>
-    </div>
-    <!-- Top Bannar -->
-    <!--
-    <div class="callout small secondary-new">
-        <div class="row column" style="background: url(/resources/img/weekly.jpg) no-repeat; height: 242px;">
-            <h1 class="white">Weekly —— One Week One Recode!</h1>
-            <p class="white">One Week One World</p> 
-        </div>
-    </div>
-    --> 
-    <div class="row" id="content">
-        <div class="medium-8 columns">
-            <div class="blog-post callout">
-                <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
-                <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
-                <p><em>导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
-            </div>
-            <div class="blog-post callout">
-                <h3 class="bm-line">Vim 使用整理 <small>3/6/2015</small></h3>
-                <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
-                <p><em>导读：</em>什么？？ 作为一个程序员，竟然不会vim，好吧，其实也没什么！但是如果你做为一个后端程序员，经常与服务器打交道还不会？那你就太！！！</p>
-            </div>
-            <div class="blog-post callout">
-                <h3 class="bm-line">Awesome blog post title <small>3/6/2015</small></h3>
-                <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
-                <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-            </div>
-            <div class="blog-post callout">
-                <h3 class="bm-line">Awesome blog post title <small>3/6/2015</small></h3>
-                <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
-                <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-                <!--<div class="callout">
-                    <ul class="menu simple">
-                        <li><a href="#">Author: Mike Mikers</a></li>
-                        <li><a href="#">Comments: 3</a></li>
-                    </ul>
-                </div>-->
-            </div>
-        </div>
-        <div class="medium-3 columns content-right" data-sticky-container>
-            <div class="sticky" data-sticky data-anchor="content">
-                <h4>分类</h4>
-                <ul>
-                    <li><a href="#">PHP杂烩</a></li>
-                    <li><a href="#">Java</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">Linux</a></li>
-                </ul>
-                <h4>标签</h4>
-                <ul>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">数据</a></li>
-                    <li><a href="#">Nosql</a></li>
-                    <li><a href="#">mysql</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="row column">
-        <ul class="pagination" role="navigation" aria-label="Pagination">
-            <li class="disabled">Previous</li>
-            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-            <li><a href="#" aria-label="Page 2">2</a></li>
-            <li><a href="#" aria-label="Page 3">3</a></li>
-            <li><a href="#" aria-label="Page 4">4</a></li>
-            <li class="ellipsis"></li>
-            <li><a href="#" aria-label="Page 12">12</a></li>
-            <li><a href="#" aria-label="Page 13">13</a></li>
-            <li><a href="#" aria-label="Next page">Next</a></li>
-        </ul>
-    </div>
-    <!--    
-    <div class="footer">
-        这是footer
-    </div>
-    -->
+
+            <ul class="right">
+                <li><a href="#">Sign</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </section>
+    </nav>
+    <ul class="breadcrumbs">
+        <li><a href="#">首页</a></li>
+        <li class="current">Vacation</li>
+    </ul>
+</div>
 
 
 
-    <script src="/resources/js/vendor/jquery.min.js"></script>
-    <script src="/resources/js/foundation.js"></script>
-    <script>
+<!-- Context Start -->
+<div class="row" id="content">
+
+    <!-- Left -->
+    <div class="medium-8 columns">
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+        <div class="blog-post callout">
+            <h3 class="bm-line">MongoDB 3.0 副本集搭建 <small>3/6/2015</small></h3>
+            <!--<img class="thumbnail" src="http://placehold.it/850x350">-->
+            <p><em class="color-blue">导读：</em>复制是在多台服务器之间同步数据的过程。复制集在大多数场合下已经代替Master-Slave复制。如果可能的话，尽可能使用复制集而不是主-从复制架构。</p>
+        </div>
+
+
+        <div class="pagination-centered">
+            <ul class="pagination">
+                <li class="arrow"><a href="#">«</a></li>
+                <li class="current"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="arrow"><a href="#">»</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Left -->
+
+
+    <!-- Right -->
+    <div class="medium-3 columns content-right small-device" data-sticky-container>
+        <div class="sticky" data-sticky data-anchor="content">
+            <h4>分类</h4>
+            <ul>
+                <li><a href="#">PHP杂烩</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Linux</a></li>
+            </ul>
+            <h4>标签</h4>
+            <ul>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">数据</a></li>
+                <li><a href="#">Nosql</a></li>
+                <li><a href="#">mysql</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right -->
+
+</div>
+<!-- Context End -->
+
+
+
+
+
+
+
+
+<script src="/resources/js/vendor/jquery.min.js"></script>
+<script src="/resources/js/foundation.min.js"></script>
+<script src="/resources/js/vendor/modernizr.js"></script>
+
+<!-- 初始化 Foundation JS -->
+<script>
+    $(document).ready(function() {
         $(document).foundation();
-    </script>
+    })
+</script>
+
 </body>
 </html>
