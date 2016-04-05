@@ -1,5 +1,6 @@
 <?php
 
+use Dao\DB AS DB;
 /**
  * Bootstrap 
  * 
@@ -39,6 +40,14 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     public function _initPlugin (Yaf\Dispatcher $dispatcher)
     {
     
+    }
+
+
+    public function _initDB (Yaf\Dispatcher $dispatcher) 
+    {
+        $config = Yaf\Registry::get('config');
+
+        // new DB();
     }
 
 

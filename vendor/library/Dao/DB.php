@@ -1,5 +1,6 @@
 <?php
 
+namespace Dao;
 /**
  * DB 
  * 
@@ -11,12 +12,12 @@
 class DB {
 
     public function __construct () {
-
+    	// echo 111;die;
     }
 
 
-    public function connect () {
-
-    }
+    // public static function connect () {
+    // 	echo 111;die;
+    // }
 
 }
