@@ -15,7 +15,10 @@ class MarkController extends Yaf\Controller_Abstract {
 
     
 
-    public function indexAction() {}
+    public function indexAction() {
+
+//        $this->getView()->display();
+    }
 
 
 
