@@ -11,13 +11,11 @@ namespace Dao;
  */
 class DB {
 
-    public function __construct () {
-    	// echo 111;die;
+
+    public static function __construct ( $db_mode = 'mysql', $dbConfig = array() ) {
+		// 工厂模式  获取对象     	
     }
 
 
-    // public static function connect () {
-    // 	echo 111;die;
-    // }
 
 }
