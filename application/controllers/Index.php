@@ -17,7 +17,7 @@ class IndexController extends Yaf\Controller_Abstract {
 
     public function indexAction () 
     {
-        new User();
+        // new User();
         $content = "Hello Yaf!";
         $this->getView()->assign('content', $content);
     }
@@ -26,13 +26,13 @@ class IndexController extends Yaf\Controller_Abstract {
 
     public function testAction() 
     {
-        echo "Hello Test";
+
     }
 
     
     public function detailAction ()
     {
-        $this->getView();  
+        // $this->getView()->assign();  
     }
 
 }
