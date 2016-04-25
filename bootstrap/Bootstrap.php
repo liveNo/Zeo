@@ -39,7 +39,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
 
     public function _initPlugin (Yaf\Dispatcher $dispatcher)
     {
-    
+        
     }
 
 
@@ -48,6 +48,15 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
         $config = Yaf\Registry::get('config');
 
         // new DB();
+    }
+
+
+    public function _initSpl (Yaf\Dispatcher $dispatcher) 
+    {
+        # Bug 会有错误日志，需要兼容 Loader::autolad(); 增加load 目录 
+        spl_autoload_register('autoRegister');
+        // $db = new \library\Core\Veiws();
+        // autoRegister();
     }
 
 

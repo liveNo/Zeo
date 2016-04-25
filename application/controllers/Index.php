@@ -1,7 +1,7 @@
 <?php
 
 
-use application\models\User;
+// use application\models\User;
 /**
  * IndexController 
  * 
@@ -17,7 +17,8 @@ class IndexController extends Yaf\Controller_Abstract {
 
     public function indexAction () 
     {
-        // new User();
+        // echo 111;die;
+        new Auth();
         $content = "Hello Yaf!";
         $this->getView()->assign('content', $content);
     }
