@@ -53,10 +53,10 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
 
     public function _initSpl (Yaf\Dispatcher $dispatcher) 
     {
-        # Bug 会有错误日志，需要兼容 Loader::autolad(); 增加load 目录 
+        # 需要默认自动载入一些常用类，诸如：DB/Cache/Views/Log等
+
+        # 如果还是找不到的话，则进入autoRegister 再次寻找！                
         spl_autoload_register('autoRegister');
-        // $db = new \library\Core\Veiws();
-        // autoRegister();
     }
 
 
