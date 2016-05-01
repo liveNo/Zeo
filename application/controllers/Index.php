@@ -17,9 +17,6 @@ class IndexController extends Yaf\Controller_Abstract {
 
     public function indexAction () 
     {
-        // echo 111;die;
-        $auth = new Auth();
-        
         $content = "Hello Yaf!";
         $this->getView()->assign('content', $content);
     }

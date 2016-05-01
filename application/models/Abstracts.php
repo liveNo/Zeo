@@ -4,9 +4,10 @@ use library\Dao\DB;
 
 class Abstracts
 {
+	protected $db;
 	
 	public function __construct ()
 	{
-		$db = DB::getInstance();
+		$this->db = DB::getInstance();
 	}
 }
