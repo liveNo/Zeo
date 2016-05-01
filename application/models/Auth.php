@@ -1,9 +1,12 @@
 <?php
 
-class Auth {
 
 
+class Auth extends Abstracts {
 
+
+	
+	
 }
 
 

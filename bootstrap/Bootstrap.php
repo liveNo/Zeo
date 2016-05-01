@@ -45,7 +45,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
 
     public function _initDB (Yaf\Dispatcher $dispatcher) 
     {
-        $config = Yaf\Registry::get('config');
+        // $config = Yaf\Registry::get('config');
 
         // new DB();
     }
@@ -54,7 +54,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     public function _initSpl (Yaf\Dispatcher $dispatcher) 
     {
         # 需要默认自动载入一些常用类，诸如：DB/Cache/Views/Log等
-
+        
         # 如果还是找不到的话，则进入autoRegister 再次寻找！                
         spl_autoload_register('autoRegister');
     }

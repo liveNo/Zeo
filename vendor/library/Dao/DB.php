@@ -11,23 +11,39 @@ namespace library\Dao;
  */
 class DB {
 
+	private static $_instance = null;
 
-  //   public static function __construct ( $db_mode = 'mysql', $dbConfig = array() ) {
-		// // 工厂模式  获取对象     	
-  //   }
-
-
-	public function __construct ()
-	{
-
-	}
-
+	private $link;
 
 	private function __construct ()
 	{
-
+		$this->connect();
 	}
 
-	// public static function getInstance
+	public static function getInstance ()
+	{
+		if ((self::$_instance instanceof self) === false) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+
+	protected function connect ()
+	{
+// 		database.hostname = "127.0.0.1"
+// database.port = 3306
+// database.database = "zeo"
+// database.username = "zeo"
+// database.password = "zeo123456"
+// database.charset = "UTF8"
+// database.driver_options.1002 = "SET NAMES utf8"
+		$dbConfig = \Yaf\Registry::get("config")->database;	
+		$this->link = new \mysqli($dbConfig->hostname, $dbConfig->username, $dbConfig->password, $dbConfig->database, $dbConfig->port);
+	}
+
+
+
+
+	private function __clone () {}
 
 }
