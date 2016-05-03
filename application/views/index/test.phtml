@@ -133,8 +133,8 @@
     $(function() {
         $.get('/resources/test.md', function (md) {
         editor = editormd("editormd", {
-                // path : "/resources/editor.md/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
-                // width: "90%",
+                path : "/resources/editor.md/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
+                width: "90%",
                 height: "100%",
                 // theme : "dark",
                 // previewTheme : "dark",
@@ -146,7 +146,8 @@
                 // searchReplace : true,
                 // watch : false,                // 关闭实时预览
                 // htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
-                // toolbar  : false,             //关闭工具栏
+                toolbar  : false,             //关闭工具栏
+                readOnly: true,
                 // // previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
                 // emoji : true,
                 // taskList : true,
@@ -167,8 +168,8 @@
                 //     // this.fullscreen();
                 //     // this.watch();
                 //     // this.watch().fullscreen();
-                //     this.previewing();
-                //     // this.preview();
+                    // this.previewing();
+                    // this.preview();
                 //     //this.setMarkdown("#PHP");
                 //     //this.width("100%");
                 //     //this.height(480);
