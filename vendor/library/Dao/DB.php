@@ -63,6 +63,40 @@ class DB {
 		return $result;
 	}
 
+
+	protected function fetchAll ()
+	{
+
+	}
+
+
+	protected function insert ()
+	{
+
+	}
+
+	protected function update ()
+	{
+
+	}
+
+
+	protected function delete ()
+	{
+		
+	}
+
+
+
+
+
+
+
+
+
+
+	// **************************** Fields/Where and so on Process  ********************//
+
 	/** 
      * 字段和表名添加 `符号
      * 保证指令中使用关键字不出错 针对mysql 
