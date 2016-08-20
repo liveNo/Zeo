@@ -7,6 +7,8 @@ class ErrorController extends Yaf\Controller_Abstract {
         assert($exception === $exception->getCode());
         echo "Code:" . $exception->getCode() . " Message:" . $exception->getMessage();
 
+
+
     }
 
 }
